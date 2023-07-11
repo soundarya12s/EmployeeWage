@@ -9,8 +9,9 @@ namespace EmployeeWageProblem
         {
             Console.WriteLine("Welcome to Employee wage problem");
 
-            Employeeproblem e = new Employeeproblem();
+            employeeprogram e = new employeeprogram();
             e.EmployeeWages();
+            e.calculateempwage();
 
         }
     }
