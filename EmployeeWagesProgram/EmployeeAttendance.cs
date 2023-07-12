@@ -20,13 +20,13 @@ namespace EmployeeWagesProgram
             else
                 Console.WriteLine("Employee is Absent");
         }
-        const int wage_per_hour = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME =0,IS_PART_TIME=1, TOTAL_WORKING_DAYS=20;
+        const int wage_per_hour = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME =0,IS_PART_TIME=1, TOTAL_WORKING_DAYS=20, TOTAL_WORKING_HRS=100;
         int totalEmpWage = 0, empHrs = 0;
 
         public void calculateempwage()
         {
 
-            for(int i = 0;i < TOTAL_WORKING_DAYS; i++)
+            for(int i = 0;i < TOTAL_WORKING_DAYS && empHrs<TOTAL_WORKING_HRS; i++)
             {
                 int empCheck = random.Next(0, 3);
                 switch (empCheck){
