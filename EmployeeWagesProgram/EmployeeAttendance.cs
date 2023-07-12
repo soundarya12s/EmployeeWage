@@ -8,9 +8,10 @@ namespace EmployeeWagesProgram
 {
     public class employeeprogram
     {
+        Random random = new Random();
         public void EmployeeWages()
         {
-            Random random = new Random();
+            
             int empCheck = random.Next(0, 2);
 
 
@@ -19,12 +20,23 @@ namespace EmployeeWagesProgram
             else
                 Console.WriteLine("Employee is Absent");
         }
-        const int wage_per_hour = 20, full_day_hour = 8;
+        const int wage_per_hour = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME =0,IS_PART_TIME=1;
+        int totalEmpWage = 0, empHrs = 0;
 
         public void calculateempwage()
         {
-            int dailyempwage = wage_per_hour + full_day_hour;
-            Console.WriteLine(dailyempwage);
+            int empCheck = random.Next(0, 3);
+            if(empCheck == IS_FULL_TIME)
+            {
+                empHrs = FULL_DAY_HR;
+            }
+            if(empCheck == IS_PART_TIME)
+            {
+                empHrs = PART_DAY_HR;
+            }
+            totalEmpWage = wage_per_hour * empHrs;
+           
+            Console.WriteLine(totalEmpWage);
         }
     }
 }
