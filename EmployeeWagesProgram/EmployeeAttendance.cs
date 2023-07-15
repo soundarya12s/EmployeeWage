@@ -8,7 +8,17 @@ namespace EmployeeWagesProgram
 {
     public class employeeprogram
     {
+        const int FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME = 0, IS_PART_TIME = 1;
+        int totalEmpWage = 0, empHr = 0, WagePerHr, totalWorkingDays, totalWorkingHrs;
+        string CompanyName;
         Random random = new Random();
+        public employeeprogram(string CompanyName, int WagePerHr, int totalWorkingDays, int totalWorkinghrs)
+        {
+            this.CompanyName = CompanyName;
+            this.WagePerHr = WagePerHr;
+            this.totalWorkingDays = totalWorkingDays;
+            this.totalWorkingHrs = totalWorkinghrs;
+        }
         public void EmployeeWages()
         {
             
@@ -20,8 +30,8 @@ namespace EmployeeWagesProgram
             else
                 Console.WriteLine("Employee is Absent");
         }
-        const int wage_per_hour = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME =0,IS_PART_TIME=1, TOTAL_WORKING_DAYS=20, TOTAL_WORKING_HRS=100;
-        int totalEmpWage = 0, empHrs = 0;
+        const int wage_per_hour = 20, TOTAL_WORKING_DAYS=20, TOTAL_WORKING_HRS=100;
+        int  empHrs = 0;
 
         public void calculateempwage()
         {

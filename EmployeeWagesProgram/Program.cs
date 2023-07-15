@@ -9,7 +9,7 @@ namespace EmployeeWageProblem
         {
             Console.WriteLine("Welcome to Employee wage problem");
 
-            employeeprogram e = new employeeprogram();
+            employeeprogram e = new employeeprogram("apple", 100, 20, 100);
             e.EmployeeWages();
             e.calculateempwage();
 
