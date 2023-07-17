@@ -13,6 +13,10 @@ namespace EmployeeWageProblem
             e.EmployeeWages();
             e.calculateempwage();
 
+            employeeprogram a = new employeeprogram("Amazon", 150, 30, 120);
+            e.EmployeeWages();
+            e.calculateempwage();
+
         }
     }
 }
